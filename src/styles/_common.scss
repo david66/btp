@@ -1,0 +1,258 @@
+/* You can add global styles to this file, and also import other style files */
+a, a:hover{
+    cursor: pointer !important;
+    font-weight: 500 !important;
+    text-decoration: underline !important;
+    font-size: 1.125rem !important;
+}
+p, li{
+    font-size: 1.125rem !important;
+}
+.btn, btn:hover {
+    padding-top: 0.7rem !important;
+    cursor: pointer !important;
+    font-weight: 500 !important;
+}
+.title-page {
+	text-align: left;
+	p {
+		font-family: HelveticaNeueLTStd-Bd;
+		font-size: 0.75rem !important;
+		line-height: 2.17;
+		letter-spacing: 2.9px;
+		color: #0081c8;
+		font-variant: small-caps;
+	}
+    .text-muted {
+        font-family: HelveticaNeueLTStd-Bd !important;
+    }
+}
+ h3 {
+    line-height: 1.6 !important;
+}
+ .answer .card-body {
+   min-height: 300px;
+ }
+ .text-btp {
+   color: #243842 !important;
+ }
+.subtitle {
+	font-family: HelveticaNeueLTStd-Bd;
+	font-size: 0.75rem !important;
+	line-height: 2.17;
+	letter-spacing: 2.9px;
+	color: #0081c8;
+	font-variant: small-caps;
+    font-weight: 400;
+}
+.img-fluid{
+	height: auto;
+}
+footer{
+  line-height: 1.8;
+}
+.footer a, .footer .adress, .footer .adress a, .footer a:hover, .subfooter a, .subfooter a:hover {
+	font-size: 0.9rem !important;
+    font-weight: normal !important;
+    color: white !important;
+    text-decoration: none !important;
+}
+.subfooter p{
+    font-size: 1rem !important;
+    font-family: HelveticaNeueLTStd-Bd;
+}
+.footer .adress, .footer .adress a {
+    color: rgba(255, 255, 255, 0.75) !important;
+}
+
+.navbar a, .navbar a:hover{
+    cursor: pointer !important;
+    font-family: HelveticaNeueLTStd-Bd;
+    text-decoration: none !important;
+}
+.navbar a:hover{
+    color: #0081c8 !important;
+}
+.navbar-toggler:hover {
+    cursor: pointer;
+}
+.containerCustom {
+    max-width: 1440px !important;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0px;
+}
+.containerCarousel {
+    max-width: 1440px !important;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0px;
+}
+i-external-link, i-play, i-mail, i-grid, i-edit, i-share-2, i-chevron-down, i-chevron-up {
+  margin-right: 0.5rem;
+  position: relative;
+  top: 0.3125rem;
+  cursor: pointer;
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    /* IE10+ CSS styles go here */
+    .containerCarousel {
+        width: 100%  !important;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0px;
+    }
+}
+h4.subtitle {
+    color: black !important;
+}
+.contract {
+    font-family: HelveticaNeueLTStd-Bd !important;
+    line-height: 1;
+}
+.modal-dialog-ex {
+  max-width: 100%;
+  background-color: white;
+  background-image: url("assets/applyBackground.jpg") !important;
+  color: white;
+  background-position: top center;
+  background-repeat:  no-repeat;
+  background-size:  cover;
+  margin: 0px auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 3% 10% 3% 10%;
+  .modal-header {
+    .title {
+      font-size: 4rem;
+      font-family: HelveticaNeueLTStd-Md !important;
+    }
+  }
+}
+.contact-us {
+  background-color: #f9f9f9;
+  color: #243842;
+  .check a {
+    color: #0081c8;
+  }
+}
+.success {
+  a {
+    color: #0081c8;
+    text-decoration: none !important;
+  }
+}
+.connected a, .olympicchannel a {
+  color: #0081c8;
+  text-decoration: none !important;
+}
+.form-control-btp {
+  height: 3.125rem;
+  padding: 1.9rem 2.1rem 1.5rem 2.1rem !important;
+  border: 1px solid rgba(19, 32, 38, 0.20)
+}
+.form-control-btp-textarea {
+  padding: 1.3rem 2.1rem 1.5rem 2.1rem !important;
+  border: 1px solid rgba(19, 32, 38, 0.20)
+}
+
+.answer a, .description a, {
+  color: #0081c8 !important;
+  font-size: 1rem !important;
+  text-decoration: none !important;
+}
+@media (max-width: 320px) {
+    .navbar {
+        max-width: 100% !important;
+    }
+}
+
+@media (max-width: 1023px) {
+  #videoHome {
+    width: 100% !important;
+  }
+  .subtitle {
+    font-size: 0.65rem !important;
+  }
+  .btn {
+    font-size: 0.875rem !important;
+  }
+  h1 {
+    font-family: HelveticaNeueLTStd-Bd;
+    font-size: 1.4rem !important;
+  }
+  h2 {
+    font-size: 1.25rem !important;
+  }
+  h3 {
+    font-size: 1rem !important;
+  }
+  h4 {
+    font-size: 1rem !important;
+  }
+  .btn {
+    padding: 0.6rem 1.6rem !important;
+  }
+  a, a:hover, p, li {
+    font-size: 0.9rem !important;
+  }
+  .navbar {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+  }
+  .navbar a {
+    font-size: 1.125rem !important;
+  }
+  .title-page {
+    text-align: left;
+    p {
+      font-family: HelveticaNeueLTStd-Bd;
+      font-size: 0.65rem !important;;
+      line-height: 2.17;
+      letter-spacing: 2.9px;
+      color: #0081c8;
+      font-variant: small-caps;
+    }
+  }
+  .modal-dialog-ex {
+    .modal-header {
+      .title {
+        font-size: 2rem;
+        font-family: HelveticaNeueLTStd-Md !important;
+      }
+    }
+  }
+}
+@media (min-width: 1024px) and (max-width: 1112px) {
+    #videoHome {
+        width: 100% !important;
+    }
+    .title-page{
+        text-align:left;
+        p {
+            font-family: HelveticaNeueLTStd-Bd;
+            font-size: 0.65rem !important;;
+            line-height: 2.17;
+            letter-spacing: 2.9px;
+            color: #0081c8;
+            font-variant: small-caps;
+        }
+    }
+    h1 {
+        font-family: HelveticaNeueLTStd-Bd;
+        font-size: 2rem !important;
+    }
+    h2 {
+        font-size: 1.25rem !important;
+    }
+    h3 {
+        font-size: 1rem !important;
+    }
+    h4 {
+        font-size: 1rem !important;
+    }
+}

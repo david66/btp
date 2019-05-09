@@ -1,0 +1,33 @@
+.error {
+  background-color: #f9f9f9;
+}
+.title{
+    font-family: HelveticaNeueLTStd-Lt;
+    font-size: 60px !important;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 0.89;
+    letter-spacing: normal;
+    text-align: center;
+    color: #202020;
+    text-shadow: 0 1px 2px #000000;
+}
+i-eye, i-home {
+  position: relative;
+  top: 6px;
+  cursor: pointer;
+  z-index: 9000;
+}
+i-alert-circle {
+    position: relative;
+    width: 32px !important;
+    top: 4px;
+}
+.alert {
+    font-family: HelveticaNeueLTStd-Roman;
+    font-size: 30px !important;
+    line-height: 1.25;
+    text-align: center;
+    color: #202020;
+}

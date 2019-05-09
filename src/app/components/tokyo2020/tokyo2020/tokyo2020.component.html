@@ -1,0 +1,246 @@
+<!-- Banner -->
+<div class="banner w-100 d-flex justify-content-center animated fadeIn fast">
+  <div class="video">
+    <div class="cover">
+      <div class="container">
+        <div class="row justify-content-md-center my-4 my-md-10">
+          <div class="col-md-8 text-left">
+            <p class="subtitle animated faster" animateOnScroll animationName="slideInLeft">BROADCASTING TRAINING PROGRAMME</p>
+            <h2 class="text-left animated fast" animateOnScroll animationName="slideInLeft">Tokyo 2020</h2>
+            <p class="white animated" animateOnScroll animationName="slideInLeft">
+              Fifty-six years after having organised the Olympic Games, Tokyo will be hosting a summer edition for the second time, from 24 July to 9 August 2020. By joining the BTP team, you can be part of it.
+              Let us answer the questions you may have about our training programme and learn more about the Tokyo 2020 Games!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="videoHome">
+      <img class="img-fluid w-100" src="assets/tokyo2020-banner.jpg">
+    </div>
+  </div>
+</div>
+<div class="main">
+
+  <!-- FAQS -->
+  <div class="container mx-auto my-5 mt-md-10 mb-md-10">
+    <div class="row justify-content-md-center">
+      <div class="col-md-8 mb-3 mt-5 mt-md-0">
+        <div class="title-page text-center">
+          <h2 class="px-5 px-md-8 my-md-8">
+            Frequently Asked Questions
+          </h2>
+        </div>
+        <div class="description">
+          <p class="text-muted text-center">
+            If you have any questions about the Broadcast Training Programme, please browse our list of frequently asked questions below.
+          </p>
+          <p class="text-muted text-center">
+            Can’t find the answer to your question? Please contact us at <a href="mailto:btp.tokyo@obs.tv">btp.tokyo@obs.tv</a>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-md-left">
+      <div class="col-md-12" *ngFor="let question of faqs; let i = index">
+        <div class="title-page my-3 my-md-0">
+          <h3 class="mt-md-6">
+            {{ question.theme }}
+          </h3>
+        </div>
+        <div class="question my-md-5 border border-top-0 border-left-0 border-right-0" *ngFor="let faq of question['questions']; let i = index">
+          <div class="row d-flex align-items-center justify-content-between py-2 py-md-0" (click)="toggleOpen(faq)">
+            <div class="col-11">
+              <p class="text-faqs mb-md-4 mb-0">
+                <strong>Q</strong> : {{ faq.question }}
+              </p>
+            </div>
+            <div class="col-1 text-right">
+              <i-plus class="icon" [class.rotate]="faq.isOpen"></i-plus>
+            </div>
+          </div>
+          <div class="answer bg-light" [class.answer-open]="faq.isOpen" [innerHTML]="faq.answer">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Guidebook -->
+  <div class="contact-us guide w-100 d-flex">
+    <div class="containerCustom col-md-8 mx-auto justify-content-center py-md-6">
+      <div class="text-center py-3 px-4 px-md-0">
+        <h2 class="px-2 pb-5">
+          Want to learn more about the Tokyo 2020 Olympics?
+        </h2>
+        <p class="text-muted text-center">
+          How many sports will be contested?
+        </p>
+        <p class="text-muted text-center">
+          What are the venues which will be used for the Games?
+        </p>
+      </div>
+      <div class="row mb-6 px-6 px-md-0 d-flex justify-content-center">
+        <div class="card animated" animateOnScroll animationName="pulse">
+          <div class="card-body p-0">
+            <div>
+              <img src="assets/guidebook.jpg" class="">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mb-6 d-flex justify-content-center">
+        <a href="https://www.2020games.metro.tokyo.jp/eng/taikaijyunbi/kanren/2020guidebook/index.html" target="_blank"
+           class="btn btn-primary">
+          <i-download class="icon mr-2"></i-download>
+          Download the guidebook
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Additional resources -->
+  <div class="container mx-auto my-5 mt-md-10 mb-md-10">
+    <div class="row justify-content-md-center">
+      <div class="col-md-8">
+        <div class="title-page text-center">
+          <h2 class="px-5 px-md-8 mt-md-6">
+            Additional resources
+          </h2>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="containerCustom w-100 pb-md-8 pb-3">
+    <div class="row justify-content-center text-center">
+      <div class="col-md-6">
+        <div class="card position mb-4 animated" animateOnScroll animationName="zoomIn">
+          <div class="card-header p-4">
+            <h4 class="m-0">Organising Committee
+            </h4>
+          </div>
+          <div class="card-body card-resources d-flex align-items-center">
+            <img class="img-fluid mx-auto my-3" src="assets/organisingComittee.jpg">
+          </div>
+          <div class="card-footer bg-transparent text-primary p-4">
+            <a href="https://tokyo2020.org/en/" target="_blank">
+              <i-external-link class="icon mr-2"></i-external-link>
+              View more
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card position mb-4 animated" animateOnScroll animationName="zoomIn">
+          <div class="card-header p-4">
+            <h4 class="m-0">International Olympic Committee (IOC)
+            </h4>
+          </div>
+          <div class="card-body card-resources d-flex align-items-center">
+            <img class="img-fluid mx-auto my-3" src="assets/intOlympicComittee.jpg">
+          </div>
+          <div class="card-footer bg-transparent text-primary p-4">
+            <a href="https://www.olympic.org/tokyo-2020" target="_blank">
+              <i-external-link class="icon mr-2"></i-external-link>
+              View more
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card position mb-4 animated" animateOnScroll animationName="zoomIn">
+          <div class="card-header p-4">
+            <h4 class="m-0">Tokyo 2020 Facebook
+            </h4>
+          </div>
+          <div class="card-body card-resources d-flex align-items-center">
+            <img class="img-fluid mx-auto my-3" src="assets/Facebook.jpg">
+          </div>
+          <div class="card-footer bg-transparent text-primary p-4">
+            <a href="https://www.facebook.com/tokyo2020/" target="_blank">
+              <i-external-link class="icon mr-2"></i-external-link>
+              View more
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card position mb-4 animated" animateOnScroll animationName="zoomIn">
+          <div class="card-header p-4">
+            <h4 class="m-0">Tokyo 2020 Twitter
+            </h4>
+          </div>
+          <div class="card-body card-resources d-flex align-items-center">
+            <img class="img-fluid mx-auto my-3" src="assets/Twitter.jpg">
+          </div>
+          <div class="card-footer bg-transparent text-primary p-4">
+            <a href="https://twitter.com/Tokyo2020" target="_blank">
+              <i-external-link class="icon mr-2"></i-external-link>
+              View more
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card position mb-4 animated" animateOnScroll animationName="zoomIn">
+          <div class="card-header p-4">
+            <h4 class="m-0">Tokyo 2020 Instagram
+            </h4>
+          </div>
+          <div class="card-body card-resources d-flex align-items-center">
+            <img class="img-fluid mx-auto my-3" src="assets/Instagram.jpg">
+          </div>
+          <div class="card-footer bg-transparent text-primary p-4">
+            <a href="https://www.instagram.com/tokyo2020/" target="_blank">
+              <i-external-link class="icon mr-2"></i-external-link>
+              View more
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card position mb-4 animated" animateOnScroll animationName="zoomIn">
+          <div class="card-header p-4">
+            <h4 class="m-0">Tokyo 2020 Youtube
+            </h4>
+          </div>
+          <div class="card-body card-resources d-flex align-items-center">
+            <img class="img-fluid mx-auto my-3" src="assets/Youtube.jpg">
+          </div>
+          <div class="card-footer bg-transparent text-primary p-4">
+            <a href="https://www.youtube.com/tokyo2020" target="_blank">
+              <i-external-link class="icon mr-2"></i-external-link>
+              View more
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Olympic Channel Explanation -->
+  <div class="contact-us w-100 d-flex justify-content-center">
+    <div class="container">
+      <div class="col-md-12 olympicchannel text-center py-6">
+        <p class="subtitle">OLYMPIC CHANNEL</p>
+        <h2 class="text-center">Tune in the Olympic Channel
+        </h2>
+        <p class="white">
+          Get ready for the Tokyo 2020 Olympic Games by watching the Olympic Channel. The Olympic Channel is a global digital platform where fans can experience the power of sport and the excitement of the Olympic Games all year round,
+          and is available worldwide via mobile apps for <a href="https://emea01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dcom.olympicchannel.olympics&data=02%7C01%7Cpeter.schmitz%40olympic.org%7Cb2bf19b896b44759669e08d5f0c78f4f%7C506d4541f9c240c2a1031aa4736de230%7C0%7C0%7C636679662395494173&sdata=gOznI4ZUPZ1u1N09GRCBThMeIJ8KW3L4HRLLYYTncOM%3D&reserved=0" target="_blank">Android</a> and <a href="https://emea01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fitunes.apple.com%2Fapp%2Folympic-channel%2Fid1129875600&data=02%7C01%7Cpeter.schmitz%40olympic.org%7Cb2bf19b896b44759669e08d5f0c78f4f%7C506d4541f9c240c2a1031aa4736de230%7C0%7C0%7C636679662395494173&sdata=mGywriLzrSzZz2S87HFbpsvV8DrMJVCBws131DllMfE%3D&reserved=0" target="_blank">iOS</a> devices and at <a href="https://emea01.safelinks.protection.outlook.com/?url=http%3A%2F%2Fwww.olympicchannel.com&data=02%7C01%7Cpeter.schmitz%40olympic.org%7Cb2bf19b896b44759669e08d5f0c78f4f%7C506d4541f9c240c2a1031aa4736de230%7C0%7C0%7C636679662395494173&sdata=xNWdS%2F%2BvkQ9%2FXKUS%2F5C3BSC3GhqC4sNxXF3ZR7aZs48%3D&reserved=0" target="_blank">olympicchannel.com.</a><br>
+        </p>
+        <div class="mt-5">
+          <a href="https://www.olympicchannel.com/en/" target="_blank">
+            <button class="btn btn-outline-dark my-sm-0">
+              <i-external-link class="icon"></i-external-link>
+              Visit Olympic Channel
+            </button>
+          </a>
+        </div>
+      </div>
+      <div class="d-flex justify-content-center mb-0 mb-md-7 animated" animateOnScroll animationName="pulse">
+        <iframe frameborder="0" scrolling="no" allowfullscreen="true" width="1050" height="779" src="https://www.olympicchannel.com/video/syndicated/playlist/obs-tokyo-2020-playlist/?partner_name=&amp;partnerdomain=&amp;type=playlist"></iframe>
+      </div>
+    </div>
+
+  </div>
+</div>

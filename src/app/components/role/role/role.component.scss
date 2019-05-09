@@ -1,0 +1,121 @@
+
+.main {
+  position: relative;
+  background-color: white;
+}
+.cover {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 21, 39, 0.80);
+}
+.banner {
+  color: white;
+  background-position: top center;
+  background-repeat:  no-repeat;
+  background-size:  cover;
+  //min-height: 1080px;
+  height: 600px;
+  .white{
+    opacity: 0.75 !important;
+  }
+}
+.video {
+  display: block;
+  width: 100%;
+  top: 150px;
+  left: 0;
+  position: relative;
+}
+.videoHome {
+  min-width: 100%;
+  min-height: 100%;
+  width: 100%;
+  height: 100%;
+}
+.contact-us {
+  background-color: #f9f9f9;
+  color: #243842;
+  button {
+    width: 260px;
+  }
+}
+.contact-us.isActive {
+    height: 520px;
+}
+.position {
+  .card-title {
+    font-size: 1.375rem;
+  }
+}
+.card-header {
+  font-family: HelveticaNeueLTStd-Bd;
+  background-color: #f7f7f7;
+  font-size: 1.6rem;
+}
+.card-body {
+  max-height: 400px;
+  overflow: hidden;
+}
+.card-body.isActive {
+  max-height: 100%;
+}
+.card-body-cover {
+  display: flex;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgb(255, 255, 255));
+  width: 100%;
+  position: absolute;
+  top: 309px;
+  left: 0;
+  right: 0;
+  height: 196px;
+}
+i-play {
+  fill: #000;
+}
+.card-footer {
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+.share {
+  img {
+    cursor: pointer;
+  }
+}
+.success {
+  a {
+    color: #0081c8;
+    text-decoration: none !important;
+  }
+  .email {
+    width: 300px;
+  }
+}
+@media (max-width: 767px) {
+  .banner {
+    height: 300px;
+  }
+  .video {
+    top: 90px;
+  }
+  .videoHome {
+    width: 100%;
+  }
+}
+@media (max-width: 320px) {
+  .banner {
+    height: 270px;
+  }
+}
+@media (min-width: 576px) and (max-width: 767px) {
+}
+
+@media (min-width: 1367px) {
+  .banner {
+    height: 800px;
+  }
+}

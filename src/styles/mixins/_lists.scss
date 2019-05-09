@@ -1,0 +1,30 @@
+// Lists
+
+// Unstyled keeps list items block level, just removes default browser padding and list-style
+@mixin list-unstyled {
+  padding-left: 0;
+  list-style: none;
+    img {
+    max-width: 184px;
+	max-height: 137.5px;
+    font-size: 1.125rem;
+    }
+    .media-body{
+        text-align: left ;
+        font-size: 1.125rem;
+    }
+    p{
+    	font-family: HelveticaNeueLTStd-Bd;
+	line-height: 1.5;
+	text-align: left;
+	color: #000000;
+    }
+    p.date {
+    font-family: HelveticaNeueLTStd-Bd;
+	font-size: .9rem;;
+	line-height: 1.33;
+	text-align: left;
+	color: #9b9b9b;
+    font-variant: small-caps;
+    }
+}

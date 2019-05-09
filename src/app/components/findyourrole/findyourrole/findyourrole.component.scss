@@ -1,0 +1,144 @@
+.card-cover, .card {
+  :hover {
+    cursor: pointer;
+  }
+}
+.card-cover.isActive {
+  display: flex;
+  background-color: rgba(1, 97, 150, 0.90);
+  cursor: pointer;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  .card-title {
+    color: white;
+  }
+  .card-body{
+    margin-top: 515px;
+  }
+  span {
+    position: relative;
+    top: -360px;
+  }
+  i-plus-square {
+    color: white;
+    width: 50px;
+    height: 50px;
+  }
+}
+.card {
+  overflow: hidden;
+}
+.card-body {
+  .card-title {
+    margin-bottom: 0;
+  }
+}
+.main {
+  position: relative;
+  background-color: white;
+  //top: 900px;
+}
+.cover {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 21, 39, 0.80);
+}
+.banner {
+  //background-image: url("../../../assets/bannerHome.jpg") !important;
+  color: white;
+  background-position: top center;
+  background-repeat:  no-repeat;
+  background-size:  cover;
+  height: 600px;
+  //min-height: 1080px;
+  .white{
+    opacity: 0.75 !important;
+  }
+}
+.video {
+  display: block;
+  width: 100%;
+  top: 150px;
+  left: 0;
+  position: relative;
+}
+.videoHome {
+  min-width: 100%;
+  min-height: 100%;
+  width: 100%;
+  height: 100%;
+}
+@media (max-width: 768px) {
+  .banner {
+    height: 300px;
+  }
+  .video {
+    top: 90px;
+  }
+  .videoHome {
+    width: 100%;
+  }
+}
+
+@media (max-width: 320px) {
+  .banner {
+    height: 270px;
+  }
+  .card-cover.isActive {
+    .card-body{
+      margin-top: 215px;
+    }
+    span {
+      position: relative;
+      top: -185px;
+    }
+  }
+}
+@media (min-width: 321px) and (max-width: 375px) {
+  .card-cover.isActive {
+    .card-body{
+      margin-top: 260px;
+    }
+    span {
+      position: relative;
+      top: -230px;
+    }
+  }
+}
+
+@media (min-width: 376px) and (max-width: 768px) {
+  .card-cover.isActive {
+    .card-body{
+      margin-top: 290px;
+    }
+    span {
+      position: relative;
+      top: -230px;
+    }
+  }
+}
+@media (min-width: 769px) and (max-width: 1112px) {
+  .card-cover.isActive {
+    .card-body{
+      margin-top: 380px;
+    }
+    span {
+      position: relative;
+      top: -290px;
+    }
+  }
+}
+
+@media (min-width: 1367px) {
+  .banner {
+    height: 800px;
+  }
+}

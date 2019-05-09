@@ -1,0 +1,38 @@
+//
+// Base styles
+//
+
+// Footer
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    background-color: #00549D;
+
+    a {
+        color: white;
+    }
+    p {
+        color: white;
+    }
+    .title {
+        color: rgba(255, 255, 255, 0.75) ;
+        font-weight: bold;
+    }
+    .adress {
+        color: rgba(255, 255, 255, 0.75) ;
+    }
+}
+.subfooter {
+    background-color: #0081C8;
+    color: white;
+    .title{
+        color: rgba(255, 255, 255, 0.75) ;
+    }
+    .footer-description {
+      font-size: 0.75rem;
+    }
+}

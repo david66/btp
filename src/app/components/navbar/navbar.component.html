@@ -1,0 +1,78 @@
+<div id="navbar" class="py-md-3 fixed-top animated fadeIn fast">
+	<nav class="navbar navbar-expand-lg container">
+		<a class="navbar-brand" routerLink="/"> <img src="assets/logoOBS.png"
+			width="79px" alt="Olympic Broadcasting Services">
+		</a>
+		<button class="navbar-toggler navbar-toggler-right" type="button"
+			(click)="toggleClass()" data-toggle="collapse"
+			data-toggle="collapse" data-target="#navbarSupportedContent"
+			aria-controls="navbarSupportedContent" aria-expanded="false"
+			aria-label="Toggle navigation">
+			<div class="hamburger" #navbarToggler [class.isActive]="isActive"
+				data-target="#navbarSupportedContent">
+				<span class="line"></span> <span class="line"></span> <span
+					class="line"></span>
+			</div>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+        <li
+          class="nav-item border border-top-0 border-right-0 border-left-0 pr-3 d-sm-block d-md-block d-lg-none">
+          <a routerLinkActive="active" class="nav-link"
+             (click)="toggleClass();collapseNav()" routerLink="/findyourrole">Find your role</a>
+        </li>
+        <li
+          class="nav-item border border-top-0 border-right-0 border-left-0 pr-3 d-xs-none d-none d-lg-block">
+          <a routerLinkActive="active" class="nav-link"
+             (click)="toggleClass();collapseNav()"
+             (click)="toggleShow()" routerLink="/findyourrole">Find your role
+            <i-chevron-down class="icon" [class.d-none]="isShow"></i-chevron-down>
+            <i-chevron-up class="icon" [class.d-none]="!isShow"></i-chevron-up>
+          </a>
+        </li>
+        <li
+          class="nav-item border border-top-0 border-right-0 border-left-0 pr-3 d-sm-none d-md-block">
+          <a routerLinkActive="active" class="nav-link"
+             (click)="toggleClass();collapseNav()" routerLink="/apply-process">Apply</a>
+        </li>
+        <li
+          class="nav-item border border-top-0 border-right-0 border-left-0 pr-3">
+          <a routerLinkActive="active" class="nav-link"
+             (click)="toggleClass();collapseNav()" routerLink="/stories">Stories</a>
+        </li>
+        <li
+          class="nav-item border border-top-0 border-right-0 border-left-0 pr-3">
+          <a routerLinkActive="active" class="nav-link"
+             (click)="toggleClass();collapseNav()" routerLink="/tokyo2020">Tokyo 2020</a>
+        </li>
+				<li
+					class="nav-item border border-top-0 border-right-0 border-left-0 pr-3">
+					<a routerLinkActive="active" class="nav-link"
+					 (click)="toggleClass();collapseNav()" routerLink="/contact">Contact</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+</div>
+<div class="py6 megamenu animated faster slideInDown" *ngIf="isShow">
+  <div class="row mt-md-5 d-flex justify-content-center">
+    <div class="col-1" *ngFor="let card of roles;  let i = index">
+      <div class="card animated"
+           (click)="isShow = false"
+           [routerLink]="['/role', card.id]">
+        <!--<div class="card-cover animated faster" #cardToggler [class.isActive]="selectedIndex == i"-->
+        <!--[class.d-none]="selectedIndex != i" [class.d-block]="selectedIndex == i"-->
+        <!--[class.slideInDown]="selectedIndex == i">-->
+        <!--<div class="card-body py-md-4 px-0 mx-auto text-center">-->
+        <!--<h6 class="card-title text-center animated fadeInUp fast">{{ card.title }}</h6>-->
+        <!--<span class="animated fadeInUp"><i-plus-square></i-plus-square></span>-->
+        <!--</div>-->
+        <!--</div>-->
+        <img class="card-img-top" src="{{ card.thumbnail }}" alt="Card image cap">
+        <div class="card-body py-md-4 px-0">
+          <h6 class="card-title text-center">{{ card.title }}</h6>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

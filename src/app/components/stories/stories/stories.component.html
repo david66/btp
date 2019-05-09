@@ -1,0 +1,117 @@
+<!-- Banner -->
+<div class="banner w-100 d-flex justify-content-center animated fadeIn fast">
+  <div class="video">
+    <div class="cover">
+      <div class="container">
+        <div class="row justify-content-md-center my-4 my-md-10">
+          <div class="col-md-8 text-left">
+            <p class="subtitle mb-1 mb-md-2 animated faster" animateOnScroll animationName="slideInLeft">BROADCASTING TRAINING PROGRAMME</p>
+            <h2 class="text-left animated fast" animateOnScroll animationName="slideInLeft">Stories</h2>
+            <p class="white animated" animateOnScroll animationName="slideInLeft">
+              Working at the Olympics is an experience like no other. Don’t take our word for it – see what previous BTP students have to say about their experience.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="videoHome">
+      <img class="img-fluid w-100" src="assets/bannerStories.jpg">
+    </div>
+  </div>
+</div>
+<div class="main">
+  <!-- Stories -->
+  <div class="container mx-auto">
+    <div class="containerCustom w-100 py-md-8 py-4">
+      <div class="">
+        <div class="row justify-content-center text-center">
+          <div class="card-columns">
+            <div class="card {{ card.class }} animated" animateOnScroll animationName="zoomIn"
+                 (mouseenter)="setIndex(i)"
+                 (mouseleave)="removeIndex(i)"
+                 [class.text-white]="card.class"
+                 [class.text-btp]="card.class == 'bg-white'"
+                 *ngFor="let card of stories; let i = index">
+
+                <!--<div class="card-cover animated faster" #cardToggler [class.isActive]="selectedIndex == i"-->
+                <!--[class.d-none]="selectedIndex != i" [class.d-block]="selectedIndex == i"-->
+                <!--[class.slideInDown]="selectedIndex == i"-->
+                <!--[routerLink]="['/role', card.id]">-->
+                  <!--&lt;!&ndash;<div class="card-body">&ndash;&gt;-->
+                    <!--&lt;!&ndash;&lt;!&ndash;<h3 class="card-title pb-2 animated fadeInUp fast">{{ card.title }}</h3>&ndash;&gt;&ndash;&gt;-->
+                    <!--&lt;!&ndash;<span class=""><i-plus-square></i-plus-square></span>&ndash;&gt;-->
+                  <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                <!--</div>-->
+
+                <img class="card-img-top" src="{{ card.thumbnail }}" alt="{{ card.thumbnail }}" *ngIf="card.thumbnail">
+                <img class="card-img-top" src="{{ card.videoThumb }}" alt="{{ card.videoThumb }}" *ngIf="card.videoThumb"
+                     data-toggle="modal"
+                     data-target="#ModalOlympic"
+                     data-backdrop="static" (click)="startPlayer(card.video)">
+                <div class="card-img-play" *ngIf="card.videoThumb"
+                     data-toggle="modal"
+                     data-target="#ModalOlympic"
+                     data-backdrop="static" (click)="startPlayer(card.video)">
+                </div>
+                <blockquote class="blockquote mb-0 card-body" *ngIf="card.blockquote">
+                  <p>{{ card.blockquote }}</p>
+                  <footer class="blockquote-footer"
+                          [class.text-white]="card.class"
+                          [class.text-muted]="card.class == 'bg-white'">
+                    <small class=""
+                           [class.text-white]="card.class"
+                           [class.text-btp]="card.class == 'bg-white'">
+                      {{ card.blockquoteFooter }}
+                    </small>
+                  </footer>
+                </blockquote>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal Video-->
+<div class="modal fade" id="ModalOlympic" tabindex="-1"
+     role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-xl" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" (click)="stopPlayer()"
+                aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="row justify-content-md-center">
+          <div class="img-fluid home-video-full-width">
+            <vg-player (onPlayerReady)="onPlayerReady($event)" *ngIf="video"> <vg-overlay-play></vg-overlay-play> <vg-buffering></vg-buffering>
+              <vg-scrub-bar> <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+                <vg-scrub-bar-buffering-time></vg-scrub-bar-buffering-time> </vg-scrub-bar>
+              <vg-controls [vgAutohide]="true" [vgAutohideTime]="1">
+                <vg-play-pause></vg-play-pause> <vg-playback-button></vg-playback-button>
+                <vg-time-display vgProperty="current" vgFormat="mm:ss"></vg-time-display>
+                <vg-scrub-bar style="pointer-events: none;"></vg-scrub-bar>
+                <vg-time-display
+                  vgProperty="left" vgFormat="mm:ss">
+                </vg-time-display>
+                <vg-time-display
+                  vgProperty="total" vgFormat="mm:ss"></vg-time-display>
+                <!-- <vg-track-selector></vg-track-selector> -->
+                <vg-mute></vg-mute> <vg-volume></vg-volume> <vg-fullscreen></vg-fullscreen>
+              </vg-controls>
+              <video [vgMedia]="media" #media autoplay
+                     id="singleVideo" crossorigin>
+                <source
+                  src="{{ video }}"
+                  type="video/mp4">
+              </video>
+            </vg-player>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

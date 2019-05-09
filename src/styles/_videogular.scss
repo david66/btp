@@ -1,0 +1,110 @@
+// vg-scrub-bar-current-time .background {
+//     background-color: #0081C8 !important;
+// }
+// vg-time-display, vg-play-pause, vg-playback-button, vg-track-selector, vg-mute, vg-volume, vg-fullscreen  {
+//     height: 36px !important;
+//     line-height: 36px !important;
+// }
+// vg-fullscreen {
+//     width: 36px !important;
+//     border-radius: 4px !important;
+//     position: relative !important;
+//     background-color: rgba(156, 175, 185, 0.8) !important;
+// }
+// vg-playback-button {
+//     display: none !important;
+// }
+// vg-scrub-bar {
+//     z-index: 9000 !important;
+// }
+// vg-scrub-bar .scrubBar {
+//     left: 10% !important;
+//     width: 65% !important;
+//     bottom: -21px !important;
+//     left: 12% !important;
+//     z-index: 9000 !important;
+// }
+// vg-controls {
+//     background-color: rgba(0, 0, 0, 0);
+// }
+// vg-controls vg-scrub-bar {
+//     height: 36px !important;
+//     line-height: 36px !important;
+//     border-radius: 4px !important;
+//     /* position: relative !important; */
+//     background-color: rgba(156, 175, 185, 0.8) !important;
+//     width: 80% !important;
+//     bottom: 14px;
+//     z-index: 3000 !important;
+//     left: -5px;
+//     margin: 0px 0px !important;
+// }
+// vg-scrub-bar ~ vg-time-display {
+//     display: none !important;
+// }
+//
+// vg-time-display {
+//     left: 75% !important;
+//     position: relative !important;
+//     z-index: 8000;
+// }
+// vg-volume {
+//     display: none !important;
+// }
+// vg-play-pause {
+//     width: 36px !important;
+//     line-height: 36px !important;
+//     border-radius: 4px !important;
+//     position: relative !important;
+//     background-color: rgba(156, 175, 185, 0.8) !important;
+//     left: 4% !important;
+//     margin-right: 10px !important;
+// }
+// vg-mute {
+//     position: relative !important;
+//     left: -6% !important;
+//     z-index: 9900;
+// }
+// vg-fullscreen {
+//     right: 4% !important;
+//     margin-left: 10px !important;
+// }
+// .native-fullscreen {
+//     vg-fullscreen {
+//         right: 2% !important;
+//     }
+//     vg-play-pause {
+//         left: 2% !important;
+//     }
+//     vg-time-display {
+//         left: 88% !important;
+//     }
+//     vg-mute {
+//         left: -3% !important;
+//     }
+//     vg-scrub-bar .scrubBar {
+//         left: 7% !important;
+//         width: 80% !important;
+//     }
+// }
+// @media (min-width: 1740px) {
+//
+// }
+// @media (max-width: 1279px) {
+//     vg-time-display {
+//         left: 50% !important;
+//     }
+//     vg-scrub-bar .scrubBar {
+//         left: 20% !important;
+//         width: 40% !important;
+//     }
+//     vg-mute {
+//         display: none !important;
+//     }
+//     vg-controls vg-scrub-bar {
+//         left: -11%;
+//     }
+//     vg-fullscreen {
+//         margin: 0px !important;
+//     }
+// }
